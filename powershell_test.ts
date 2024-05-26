@@ -6,7 +6,7 @@ const EOL = Deno.build.os === "windows" ? "\r\n" : "\n";
 
 Deno.test("simple inline test", async () => {
     const cmd = await powershell("Write-Host 'Hello, World!'");
-    equals(cmd.text(), `Hello, World!${EOL}`);
+    equals(cmd.text(), `Hello, World!\n`);
     equals(0, cmd.code);
 });
 
@@ -26,7 +26,7 @@ Deno.test("simple file test", async () => {
         // purposely add space after test.ps1
         const cmd = await powershell("test.ps1 ");
         equals(0, cmd.code);
-        equals(cmd.text(), `Hello, World!${EOL}`);
+        equals(cmd.text(), `Hello, World!\n`);
     } finally {
         await remove("test.ps1");
     }
