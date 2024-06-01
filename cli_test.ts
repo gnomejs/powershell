@@ -1,6 +1,6 @@
 import { assertEquals as equals } from "jsr:@std/assert@^0.224.0";
 import { remove, writeTextFile } from "jsr:@gnome/fs@^0.0.0/deno";
-import { powershell } from "./powershell.ts";
+import { powershell } from "./cli.ts";
 
 const EOL = Deno.build.os === "windows" ? "\r\n" : "\n";
 

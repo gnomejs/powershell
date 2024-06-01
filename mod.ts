@@ -24,4 +24,4 @@
  * ```
  * @module
  */
-export * from "./powershell.ts";
+export * from "./cli.ts";

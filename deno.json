@@ -1,9 +1,9 @@
 {
     "name": "@gnome/powershell",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "exports": {
         ".": "./mod.ts",
-        "./powershell": "./powershell.ts"
+        "./cli": "./cli.ts"
     },
     "compilerOptions": {
         "lib": ["deno.worker"]
@@ -25,11 +25,11 @@
     "publish": {
         "include": [
             "mod.ts",
-            "powershell.ts",
+            "cli.ts",
             "README.md",
             "LICENSE.md",
             "deno.json"
         ]
     },
-    "imports": { "@gnome/exec": "jsr:@gnome/exec@^0.4.1" }
+    "imports": { "@gnome/exec": "jsr:@gnome/exec@^0.4.4" }
 }
